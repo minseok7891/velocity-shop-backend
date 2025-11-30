@@ -1,0 +1,36 @@
+plugins {
+    id 'java'
+}
+
+group = 'me.minseok'
+version = '1.0.0'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+repositories {
+    mavenCentral()
+    maven { url = 'https://hub.spigotmc.org/nexus/content/repositories/snapshots/' }
+    maven { url = 'https://oss.sonatype.org/content/repositories/snapshots' }
+    maven { url = 'https://jitpack.io' }
+}
+
+dependencies {
+    compileOnly 'org.spigotmc:spigot-api:1.21.1-R0.1-SNAPSHOT'
+    compileOnly 'com.github.MilkBowl:VaultAPI:1.7.1'
+    
+    implementation 'mysql:mysql-connector-java:8.0.33'
+    implementation 'com.zaxxer:HikariCP:5.1.0'
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+jar {
+    archiveBaseName = 'VelocityShopSystem-Backend'
+    archiveVersion = '1.0.0'
+}

@@ -1,0 +1,27 @@
+server-name: "lobby" # Change this for each server (lobby, survival, creative)
+database:
+  host: "localhost"
+  port: 3306
+  database: minecraft_db
+  username: minecraft_user
+  password: "change_me"
+
+# Shop settings
+shop:
+  currency-symbol: "\uC6D0"
+  default-balance: 0.0
+  
+# Dynamic pricing
+dynamic-pricing:
+  enabled: true
+  buy-increase-rate: 0.05    # 5% increase on purchase
+  sell-decrease-rate: 0.03   # 3% decrease on sale
+  max-multiplier: 5.0        # Maximum 5x base price
+  min-multiplier: 0.2        # Minimum 20% of base price
+  
+  recovery:
+    enabled: true
+    rate: 0.1                # 10% recovery per interval
+    interval: 3600           # 1 hour in seconds
+
+  auto-refresh-interval: 10  # Sync with DB every 10 seconds (0 to disable)
