@@ -1,0 +1,27 @@
+# Discount system configuration
+# Players with higher priority tiers will receive those benefits
+
+discounts:
+  default:
+    permission: "shopsystem.discount.default"
+    buy_discount: 0    # No discount
+    sell_multiplier: 1.0  # Normal sell price
+    priority: 0
+    
+  vip:
+    permission: "shopsystem.discount.vip"
+    buy_discount: 5    # 5% discount on purchases
+    sell_multiplier: 1.1  # 10% bonus on sales
+    priority: 10
+    
+  mvp:
+    permission: "shopsystem.discount.mvp"
+    buy_discount: 10   # 10% discount
+    sell_multiplier: 1.25 # 25% bonus
+    priority: 20
+    
+  elite:
+    permission: "shopsystem.discount.elite"
+    buy_discount: 15   # 15% discount
+    sell_multiplier: 1.5  # 50% bonus
+    priority: 30

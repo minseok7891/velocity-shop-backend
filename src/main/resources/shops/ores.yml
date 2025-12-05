@@ -1,0 +1,41 @@
+category:
+  name: "광물"
+  icon: DIAMOND
+  slot: 11
+
+items:
+  DIAMOND:
+    material: DIAMOND
+    buy: 100
+    sell: 25
+    dynamic: true
+  
+  EMERALD:
+    material: EMERALD
+    buy: 80
+    sell: 20
+    dynamic: true
+  
+  IRON_INGOT:
+    material: IRON_INGOT
+    buy: 10
+    sell: 2.5
+    dynamic: true
+  
+  GOLD_INGOT:
+    material: GOLD_INGOT
+    buy: 15
+    sell: 3.75
+    dynamic: true
+  
+  NETHERITE_INGOT:
+    material: NETHERITE_INGOT
+    buy: 1000
+    sell: 250
+    dynamic: true
+  
+  COAL:
+    material: COAL
+    buy: 5
+    sell: 1.25
+    dynamic: true

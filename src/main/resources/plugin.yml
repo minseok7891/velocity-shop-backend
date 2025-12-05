@@ -1,0 +1,110 @@
+name: Shop-Backend
+version: 1.0.0
+main: me.minseok.shopsystem.ShopCore
+api-version: '1.21'
+author: minseok
+description: Backend for Velocity centralized shop management
+depend: [Vault]
+
+commands:
+  balance:
+    description: Check your balance
+    usage: /balance [player]
+    aliases: [bal, money, 돈, 잔액]
+  
+  pay:
+    description: Send money to another player
+    usage: /pay <player> <amount>
+    aliases: [송금, 이체]
+  
+  baltop:
+    description: View top richest players
+    usage: /baltop [page]
+    aliases: [balancetop, 순위, 돈순위]
+  
+  eco:
+    description: Economy management commands
+    usage: /eco <give|take|set|reset> <player> [amount]
+    permission: shopsystem.eco.admin
+  
+  shop:
+    description: Open the shop or manage shop
+    usage: /shop [reload|setprice|reset|history|stats|popular|search]
+    aliases: [상점]
+  
+  sell:
+    description: Sell items
+    usage: /sell <hand|all|<item>>
+    aliases: [판매]
+    
+  sellall:
+    description: Sell all inventory items at once
+    usage: /sellall
+    
+  sellgui:
+    description: Open GUI to sell items
+    usage: /sellgui
+    aliases: [판매창]
+    
+  eshop:
+    description: Admin shop management commands
+    usage: /eshop <additem|edititem|deleteitem|addhanditem|addsection|editsection|deletesection>
+    permission: shopsystem.admin
+    
+  shopgive:
+    description: Give shop items to players
+    usage: /shopgive <section> <material> [player] [amount]
+    permission: shopsystem.admin
+    
+permissions:
+  shopsystem.use:
+    description: Use the shop
+    default: true
+    
+  shopsystem.balance:
+    description: Check balance
+    default: true
+    
+  shopsystem.pay:
+    description: Send money to players
+    default: true
+    
+  shopsystem.eco.admin:
+    description: Economy admin commands
+    default: op
+    
+  shopsystem.admin:
+    description: All admin permissions
+    default: op
+    children:
+      shopsystem.eco.admin: true
+      shopsystem.shop.*: true
+      shopsystem.sellall.*: true
+      shopsystem.sellallitem.*: true
+      shopsystem.sellallhand.*: true
+      shopsystem.sellgui.*: true
+      
+  # Category shop access permissions
+  shopsystem.shop.*:
+    description: Access to all shop categories
+    default: true
+    
+  # Category sellall permissions
+  shopsystem.sellall.*:
+    description: Sell all items from all categories
+    default: true
+    
+  # Category sellall item permissions
+  shopsystem.sellallitem.*:
+    description: Sell specific items from all categories
+    default: true
+    
+  # Category sellall hand permissions
+  shopsystem.sellallhand.*:
+    description: Sell hand items from all categories
+    default: true
+    
+  # Category sell GUI permissions
+  shopsystem.sellgui.*:
+    description: Use sell GUI for all categories
+    default: true

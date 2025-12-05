@@ -1,0 +1,41 @@
+category:
+  name: "마법 부여"
+  icon: ENCHANTED_BOOK
+  slot: 10
+
+items:
+  MENDING:
+    material: ENCHANTED_BOOK
+    buy: 5000
+    sell: 1250
+    dynamic: true
+  
+  SHARPNESS_V:
+    material: ENCHANTED_BOOK
+    buy: 300
+    sell: 75
+    dynamic: true
+  
+  EFFICIENCY_V:
+    material: ENCHANTED_BOOK
+    buy: 250
+    sell: 62.5
+    dynamic: true
+  
+  UNBREAKING_III:
+    material: ENCHANTED_BOOK
+    buy: 180
+    sell: 45
+    dynamic: true
+  
+  FORTUNE_III:
+    material: ENCHANTED_BOOK
+    buy: 400
+    sell: 100
+    dynamic: true
+  
+  SILK_TOUCH:
+    material: ENCHANTED_BOOK
+    buy: 200
+    sell: 50
+    dynamic: true
